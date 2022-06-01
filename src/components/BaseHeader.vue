@@ -5,11 +5,7 @@
       </div>
       <nav class="header__nav">
           <ul>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li class="active"><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
+              <li v-for="(link, index) in links" :key="index" :class="{active : link.current}"><a :href="link.url">{{link.text}}</a></li>
           </ul>
       </nav>
   </header>
@@ -18,6 +14,32 @@
 <script>
 export default {
     name: 'BaseHeader',
+    data() {
+        return {
+            links: [
+                {
+                    text: "Home",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "Prodotti",
+                    url: "#",
+                    current: true,
+                },
+                {
+                    text: "Chi Siamo",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "Contatti",
+                    url: "#",
+                    current: false,
+                },
+            ],
+        }
+    },
 }
 </script>
 
