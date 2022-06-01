@@ -36,6 +36,7 @@ export default {
             @include listInline;
             justify-content: center;
             a { // header__nav ul a
+                display: inline-block;
                 padding: 1.25rem;
                 text-decoration: none;
                 color: #000;
