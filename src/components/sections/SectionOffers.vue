@@ -23,6 +23,10 @@ export default {
 .offers {
     &__list {
         display: flex;
+
+        > * {
+            width: 50%;
+        }
     }
 }
 </style>

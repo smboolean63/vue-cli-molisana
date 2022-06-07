@@ -2,6 +2,7 @@
   <div class="product">
     <img :src="image" :alt="title">
     <h3>{{title}}</h3>
+    <i class="far fa-envelope"></i>
   </div>
 </template>
 
